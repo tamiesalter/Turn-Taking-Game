@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Baby Cloud"; ObjectID = "99q-HW-gn1"; */
+"99q-HW-gn1.text" = "Baby Wolk";
+
+/* Class = "UIButton"; normalTitle = "QueInnovations Info"; ObjectID = "BLK-hC-akg"; */
+"BLK-hC-akg.normalTitle" = "QueInnovations informatie";
+
+/* Class = "UILabel"; text = "Cloud Eyes"; ObjectID = "E7n-BJ-t5G"; */
+"E7n-BJ-t5G.text" = "Wolk Ogen";
+
+/* Class = "UILabel"; text = "Windmill Speed"; ObjectID = "VNr-sX-Otd"; */
+"VNr-sX-Otd.text" = "Windmolen Snelheid";
+
+/* Class = "UILabel"; text = "Turn Speed"; ObjectID = "hMi-1K-trH"; */
+"hMi-1K-trH.text" = "Beurt Snelheid";
+
+/* Class = "UIButton"; normalTitle = "Developer Info"; ObjectID = "o0D-uv-NbZ"; */
+"o0D-uv-NbZ.normalTitle" = "Ontwikkelaar informatie";
+
+/* Class = "UILabel"; text = "Menu"; ObjectID = "s93-2G-1lt"; */
+"s93-2G-1lt.text" = "menukaart";
+
+/* Class = "UILabel"; text = "Elephant Speed"; ObjectID = "ta9-Sr-hIk"; */
+"ta9-Sr-hIk.text" = "Olifant Snelheid";
+
+/* Class = "UILabel"; text = "Music"; ObjectID = "x4D-hy-776"; */
+"x4D-hy-776.text" = "Muziek";

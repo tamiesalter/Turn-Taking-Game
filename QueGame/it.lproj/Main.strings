@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Baby Cloud"; ObjectID = "99q-HW-gn1"; */
+"99q-HW-gn1.text" = "bambino Nube";
+
+/* Class = "UIButton"; normalTitle = "QueInnovations Info"; ObjectID = "BLK-hC-akg"; */
+"BLK-hC-akg.normalTitle" = "QueInnovations informazioni";
+
+/* Class = "UILabel"; text = "Cloud Eyes"; ObjectID = "E7n-BJ-t5G"; */
+"E7n-BJ-t5G.text" = "nube Occhi";
+
+/* Class = "UILabel"; text = "Windmill Speed"; ObjectID = "VNr-sX-Otd"; */
+"VNr-sX-Otd.text" = "Mulino a vento di velocità";
+
+/* Class = "UILabel"; text = "Turn Speed"; ObjectID = "hMi-1K-trH"; */
+"hMi-1K-trH.text" = "Girare Velocità";
+
+/* Class = "UIButton"; normalTitle = "Developer Info"; ObjectID = "o0D-uv-NbZ"; */
+"o0D-uv-NbZ.normalTitle" = "Sviluppatore informazioni";
+
+/* Class = "UILabel"; text = "Menu"; ObjectID = "s93-2G-1lt"; */
+"s93-2G-1lt.text" = "Menu";
+
+/* Class = "UILabel"; text = "Elephant Speed"; ObjectID = "ta9-Sr-hIk"; */
+"ta9-Sr-hIk.text" = "Elefante Velocità";
+
+/* Class = "UILabel"; text = "Music"; ObjectID = "x4D-hy-776"; */
+"x4D-hy-776.text" = "Musica";

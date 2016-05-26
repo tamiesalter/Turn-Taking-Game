@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,8 +16,27 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape-1" translatesAutoresizingMaskIntoConstraints="NO" id="GbR-Wj-9pm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Que" translatesAutoresizingMaskIntoConstraints="NO" id="m2v-xb-Xjs">
+                                <rect key="frame" x="148" y="94" width="304" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="nNb-WL-1JO"/>
+                                    <constraint firstAttribute="width" constant="304" id="xsh-0f-0Lt"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2470588235" green="0.58823529409999997" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="GbR-Wj-9pm" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="0On-Sc-neA"/>
+                            <constraint firstItem="GbR-Wj-9pm" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="DM9-7a-8Rg"/>
+                            <constraint firstItem="m2v-xb-Xjs" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="74" id="TFF-CE-cub"/>
+                            <constraint firstAttribute="trailing" secondItem="GbR-Wj-9pm" secondAttribute="trailing" id="iS2-kr-Ddb"/>
+                            <constraint firstItem="GbR-Wj-9pm" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="klU-da-5uk"/>
+                            <constraint firstItem="m2v-xb-Xjs" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="wPy-NU-LFN"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +44,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Que" width="692" height="263"/>
+        <image name="landscape-1" width="1400" height="980"/>
+    </resources>
 </document>

@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Baby Cloud"; ObjectID = "99q-HW-gn1"; */
+"99q-HW-gn1.text" = "Baby-Wolke";
+
+/* Class = "UIButton"; normalTitle = "QueInnovations Info"; ObjectID = "BLK-hC-akg"; */
+"BLK-hC-akg.normalTitle" = "QueInnovations Information";
+
+/* Class = "UILabel"; text = "Wolke Augen"; ObjectID = "E7n-BJ-t5G"; */
+"E7n-BJ-t5G.text" = "nube Occhi";
+
+/* Class = "UILabel"; text = "Windmill Speed"; ObjectID = "VNr-sX-Otd"; */
+"VNr-sX-Otd.text" = "Windmill Geschwindigkeit";
+
+/* Class = "UILabel"; text = "Turn Speed"; ObjectID = "hMi-1K-trH"; */
+"hMi-1K-trH.text" = "Drehen Sie Geschwindigkeit";
+
+/* Class = "UIButton"; normalTitle = "Developer Info"; ObjectID = "o0D-uv-NbZ"; */
+"o0D-uv-NbZ.normalTitle" = "Entwickler Information";
+
+/* Class = "UILabel"; text = "Menu"; ObjectID = "s93-2G-1lt"; */
+"s93-2G-1lt.text" = "Menü";
+
+/* Class = "UILabel"; text = "Elephant Speed"; ObjectID = "ta9-Sr-hIk"; */
+"ta9-Sr-hIk.text" = "Elephant Geschwindigkeit";
+
+/* Class = "UILabel"; text = "Music"; ObjectID = "x4D-hy-776"; */
+"x4D-hy-776.text" = "Musik";

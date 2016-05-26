@@ -1,25 +1,472 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8118" systemVersion="15A172" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0eS-Dy-gpp">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8098"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Turn_Taking" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
                     </layoutGuides>
-                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                    <view key="view" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.2470588235" green="0.58823529409999997" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="sAw-Dc-7Np">
+                        <barButtonItem key="leftBarButtonItem" image="settings" id="dgP-Te-CI3">
+                            <inset key="imageInsets" minX="0.0" minY="1" maxX="0.0" maxY="1"/>
+                            <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="dgP-Te-CI3" id="rNI-3y-XkX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1113" y="-349.5"/>
+        </scene>
+        <!--Main Menu View Controller-->
+        <scene sceneID="fHQ-Ee-zDe">
+            <objects>
+                <viewController id="f6G-f3-VGn" customClass="MainMenuViewController" customModule="Turn_Taking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VUQ-0q-vR5"/>
+                        <viewControllerLayoutGuide type="bottom" id="3BO-5g-OOZ"/>
+                    </layoutGuides>
+                    <view key="view" clearsContextBeforeDrawing="NO" tag="1" contentMode="scaleToFill" id="JWR-Aa-IhE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s93-2G-1lt">
+                                <rect key="frame" x="20" y="34" width="565" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Cyl-4v-byu"/>
+                                    <constraint firstAttribute="height" constant="49" id="Vy5-ct-ZQi"/>
+                                    <constraint firstAttribute="height" constant="65" id="fsV-yq-sQy"/>
+                                    <constraint firstAttribute="width" constant="565" id="gco-z7-0D0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Cyl-4v-byu"/>
+                                        <exclude reference="fsV-yq-sQy"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="35"/>
+                                    <mask key="constraints">
+                                        <include reference="Cyl-4v-byu"/>
+                                        <include reference="fsV-yq-sQy"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Windmill Speed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNr-sX-Otd">
+                                <rect key="frame" x="20" y="89" width="560" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="1MI-uz-anG"/>
+                                    <constraint firstAttribute="width" constant="167" id="CL1-c5-UhT"/>
+                                    <constraint firstAttribute="height" constant="30" id="Zsu-LG-CyI"/>
+                                    <constraint firstAttribute="height" constant="22" id="yT2-vH-Vvk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="CL1-c5-UhT"/>
+                                        <exclude reference="Zsu-LG-CyI"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                    <mask key="constraints">
+                                        <include reference="CL1-c5-UhT"/>
+                                        <include reference="Zsu-LG-CyI"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elephant Speed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ta9-Sr-hIk">
+                                <rect key="frame" x="20" y="144" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="6Nr-t4-aGE"/>
+                                    <constraint firstAttribute="width" constant="167" id="DGS-zw-pQm"/>
+                                    <constraint firstAttribute="height" constant="30" id="T6N-ze-0A8"/>
+                                    <constraint firstAttribute="height" constant="21" id="zAl-Ke-260"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DGS-zw-pQm"/>
+                                        <exclude reference="T6N-ze-0A8"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                    <mask key="constraints">
+                                        <include reference="DGS-zw-pQm"/>
+                                        <include reference="T6N-ze-0A8"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4D-hy-776">
+                                <rect key="frame" x="20" y="259" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="1Sp-pI-Puk"/>
+                                    <constraint firstAttribute="height" constant="30" id="J1l-wJ-OA2"/>
+                                    <constraint firstAttribute="width" constant="101" id="Rqj-mD-eFR"/>
+                                    <constraint firstAttribute="height" constant="21" id="lcY-t2-cnp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="J1l-wJ-OA2"/>
+                                        <exclude reference="Rqj-mD-eFR"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                    <mask key="constraints">
+                                        <include reference="J1l-wJ-OA2"/>
+                                        <include reference="Rqj-mD-eFR"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn Speed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMi-1K-trH">
+                                <rect key="frame" x="20" y="202" width="565" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Nn1-de-Gtn"/>
+                                    <constraint firstAttribute="width" constant="565" id="a6t-XV-dpk"/>
+                                    <constraint firstAttribute="width" constant="167" id="oYj-BM-ax5"/>
+                                    <constraint firstAttribute="height" constant="21" id="t2m-fU-eqK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Nn1-de-Gtn"/>
+                                        <exclude reference="oYj-BM-ax5"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                    <mask key="constraints">
+                                        <include reference="Nn1-de-Gtn"/>
+                                        <include reference="oYj-BM-ax5"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="otz-Jd-CwL">
+                                <rect key="frame" x="18" y="107" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3lF-iy-evR"/>
+                                    <constraint firstAttribute="height" constant="30" id="GWN-ZW-G0i"/>
+                                    <constraint firstAttribute="width" constant="114" id="Ush-Yy-E1z"/>
+                                    <constraint firstAttribute="width" constant="167" id="gLf-ok-6v8"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3lF-iy-evR"/>
+                                        <exclude reference="gLf-ok-6v8"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="3lF-iy-evR"/>
+                                        <include reference="gLf-ok-6v8"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="moveMill:" destination="f6G-f3-VGn" eventType="valueChanged" id="Unh-WA-88v"/>
+                                </connections>
+                            </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lLW-3c-wlC">
+                                <rect key="frame" x="20" y="406" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="9gA-nP-BKB"/>
+                                    <constraint firstAttribute="height" constant="31" id="RZA-u2-voD"/>
+                                    <constraint firstAttribute="width" constant="49" id="Tca-0B-Tdl"/>
+                                    <constraint firstAttribute="height" constant="31" id="Td8-mO-RxZ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="RZA-u2-voD"/>
+                                        <exclude reference="Tca-0B-Tdl"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="RZA-u2-voD"/>
+                                        <include reference="Tca-0B-Tdl"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="babyCloudMoved:" destination="f6G-f3-VGn" eventType="valueChanged" id="fzE-SO-VC2"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baby Cloud" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99q-HW-gn1">
+                                <rect key="frame" x="20" y="378" width="560" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="3lt-zZ-lSY"/>
+                                    <constraint firstAttribute="height" constant="30" id="8cF-72-TMQ"/>
+                                    <constraint firstAttribute="width" constant="560" id="m4g-0O-pGG"/>
+                                    <constraint firstAttribute="width" constant="167" id="w7l-qG-VUg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8cF-72-TMQ"/>
+                                        <exclude reference="w7l-qG-VUg"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                    <mask key="constraints">
+                                        <include reference="8cF-72-TMQ"/>
+                                        <include reference="w7l-qG-VUg"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iYL-wB-diI">
+                                <rect key="frame" x="20" y="281" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="8ip-GG-xVQ"/>
+                                    <constraint firstAttribute="height" constant="31" id="9uw-mL-8tu"/>
+                                    <constraint firstAttribute="width" constant="49" id="TR4-xz-rQo"/>
+                                    <constraint firstAttribute="width" constant="49" id="Yzz-3m-P9r"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8ip-GG-xVQ"/>
+                                        <exclude reference="TR4-xz-rQo"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="8ip-GG-xVQ"/>
+                                        <include reference="TR4-xz-rQo"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="musicSwitch:" destination="f6G-f3-VGn" eventType="valueChanged" id="vA6-VF-efu"/>
+                                </connections>
+                            </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="2" maxValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="LhI-3s-uwW">
+                                <rect key="frame" x="18" y="222" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="28j-LE-91G"/>
+                                    <constraint firstAttribute="height" constant="30" id="aNe-l1-h9u"/>
+                                    <constraint firstAttribute="width" constant="114" id="i7L-9Z-3qt"/>
+                                    <constraint firstAttribute="width" constant="167" id="tjG-MF-K01"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="aNe-l1-h9u"/>
+                                        <exclude reference="tjG-MF-K01"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="aNe-l1-h9u"/>
+                                        <include reference="tjG-MF-K01"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="turnSpeedMoved:" destination="f6G-f3-VGn" eventType="valueChanged" id="lhx-VT-RgM"/>
+                                </connections>
+                            </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HDo-SL-LOU">
+                                <rect key="frame" x="20" y="344" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="EMQ-pm-j8z"/>
+                                    <constraint firstAttribute="width" constant="49" id="oa2-aA-ZST"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="cloudEyesMoved:" destination="f6G-f3-VGn" eventType="valueChanged" id="nW3-9t-TYw"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cloud Eyes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7n-BJ-t5G">
+                                <rect key="frame" x="20" y="320" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="D6B-kY-kwc"/>
+                                    <constraint firstAttribute="height" constant="30" id="PCl-QP-4h4"/>
+                                    <constraint firstAttribute="width" constant="560" id="SMM-KY-p9d"/>
+                                    <constraint firstAttribute="height" constant="30" id="iwK-Rn-nC8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="D6B-kY-kwc"/>
+                                        <exclude reference="PCl-QP-4h4"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                    <mask key="constraints">
+                                        <include reference="D6B-kY-kwc"/>
+                                        <include reference="PCl-QP-4h4"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLK-hC-akg">
+                                <rect key="frame" x="20" y="528" width="565" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="565" id="HJB-Z7-wIe"/>
+                                    <constraint firstAttribute="height" constant="30" id="PMf-AY-ly0"/>
+                                </constraints>
+                                <state key="normal" title="QueInnovations Info">
+                                    <color key="titleColor" red="0.052407868206501007" green="0.14063796401023865" blue="0.89365077018737793" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="queBtnUsed:" destination="f6G-f3-VGn" eventType="touchUpInside" id="mU8-IA-CmA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0D-uv-NbZ">
+                                <rect key="frame" x="20" y="550" width="565" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QqI-Ov-t6g"/>
+                                    <constraint firstAttribute="width" constant="565" id="m4u-Mz-Cys"/>
+                                </constraints>
+                                <state key="normal" title="Developer Info">
+                                    <color key="titleColor" red="0.061705499887466431" green="0.058129854500293732" blue="0.87788575887680054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="devBtnUsed:" destination="f6G-f3-VGn" eventType="touchUpInside" id="naF-Gq-VkM"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="400" minValue="100" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="hrb-8G-jRb">
+                                <rect key="frame" x="18" y="164" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9nF-Yi-5y8"/>
+                                    <constraint firstAttribute="width" constant="114" id="PqU-kR-rpJ"/>
+                                    <constraint firstAttribute="width" constant="167" id="Yso-f7-heT"/>
+                                    <constraint firstAttribute="height" constant="30" id="jKE-fN-Lp9"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Yso-f7-heT"/>
+                                        <exclude reference="jKE-fN-Lp9"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Yso-f7-heT"/>
+                                        <include reference="jKE-fN-Lp9"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="moveElephant:" destination="f6G-f3-VGn" eventType="valueChanged" id="bfU-tF-WyN"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="0.24705882352941178" green="0.58823529411764708" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="o0D-uv-NbZ" firstAttribute="leading" secondItem="JWR-Aa-IhE" secondAttribute="leadingMargin" id="4i8-rf-A9d"/>
+                            <constraint firstItem="ta9-Sr-hIk" firstAttribute="leading" secondItem="JWR-Aa-IhE" secondAttribute="leadingMargin" id="ANN-zR-CgL"/>
+                            <constraint firstItem="E7n-BJ-t5G" firstAttribute="top" secondItem="iYL-wB-diI" secondAttribute="bottom" constant="8" id="BeX-yZ-bAP"/>
+                            <constraint firstItem="VNr-sX-Otd" firstAttribute="top" secondItem="VUQ-0q-vR5" secondAttribute="bottom" constant="69" id="D5c-0k-hkU"/>
+                            <constraint firstItem="lLW-3c-wlC" firstAttribute="top" secondItem="HDo-SL-LOU" secondAttribute="bottom" constant="31" id="DM3-k6-yf1"/>
+                            <constraint firstItem="3BO-5g-OOZ" firstAttribute="top" secondItem="BLK-hC-akg" secondAttribute="bottom" constant="42" id="EK9-lC-xdH"/>
+                            <constraint firstItem="HDo-SL-LOU" firstAttribute="leading" secondItem="JWR-Aa-IhE" secondAttribute="leadingMargin" id="FWt-cc-wcz"/>
+                            <constraint firstItem="hrb-8G-jRb" firstAttribute="top" secondItem="otz-Jd-CwL" secondAttribute="bottom" constant="27" id="H3f-qM-yVC"/>
+                            <constraint firstItem="lLW-3c-wlC" firstAttribute="leading" secondItem="JWR-Aa-IhE" secondAttribute="leadingMargin" id="Hoe-dE-IeF"/>
+                            <constraint firstItem="hrb-8G-jRb" firstAttribute="leading" secondItem="JWR-Aa-IhE" secondAttribute="leadingMargin" id="Kj8-0l-cBi"/>
+                            <constraint firstItem="ta9-Sr-hIk" firstAttribute="top" secondItem="otz-Jd-CwL" secondAttribute="bottom" constant="7" id="OdO-Ut-XSW"/>
+                            <constraint firstItem="VNr-sX-Otd" firstAttribute="leading" secondItem="JWR-Aa-IhE" secondAttribute="leadingMargin" id="U2K-RJ-Ga7"/>
+                            <constraint firstItem="otz-Jd-CwL" firstAttribute="leading" secondItem="JWR-Aa-IhE" secondAttribute="leadingMargin" id="WWS-nz-Tby"/>
+                            <constraint firstItem="s93-2G-1lt" firstAttribute="top" secondItem="VUQ-0q-vR5" secondAttribute="bottom" constant="14" id="WzC-Is-3O4"/>
+                            <constraint firstItem="99q-HW-gn1" firstAttribute="leading" secondItem="JWR-Aa-IhE" secondAttribute="leadingMargin" id="a7p-0V-Kl2"/>
+                            <constraint firstItem="iYL-wB-diI" firstAttribute="top" secondItem="x4D-hy-776" secondAttribute="bottom" constant="1" id="eyY-4d-Q5z"/>
+                            <constraint firstItem="iYL-wB-diI" firstAttribute="leading" secondItem="JWR-Aa-IhE" secondAttribute="leadingMargin" id="fb4-Nm-1sv"/>
+                            <constraint firstItem="E7n-BJ-t5G" firstAttribute="leading" secondItem="JWR-Aa-IhE" secondAttribute="leadingMargin" id="gat-3C-xgG"/>
+                            <constraint firstItem="otz-Jd-CwL" firstAttribute="top" secondItem="s93-2G-1lt" secondAttribute="bottom" constant="24" id="heH-TS-AXY"/>
+                            <constraint firstItem="BLK-hC-akg" firstAttribute="leading" secondItem="JWR-Aa-IhE" secondAttribute="leadingMargin" id="lmI-Nb-tK2"/>
+                            <constraint firstItem="99q-HW-gn1" firstAttribute="top" secondItem="HDo-SL-LOU" secondAttribute="bottom" constant="3" id="mVd-Fs-va9"/>
+                            <constraint firstItem="hMi-1K-trH" firstAttribute="top" secondItem="hrb-8G-jRb" secondAttribute="bottom" constant="8" id="neQ-U3-bIH"/>
+                            <constraint firstItem="x4D-hy-776" firstAttribute="top" secondItem="LhI-3s-uwW" secondAttribute="bottom" constant="7" id="qhy-LV-LoB"/>
+                            <constraint firstItem="LhI-3s-uwW" firstAttribute="leading" secondItem="JWR-Aa-IhE" secondAttribute="leadingMargin" id="sT3-YJ-Osh"/>
+                            <constraint firstItem="LhI-3s-uwW" firstAttribute="top" secondItem="hrb-8G-jRb" secondAttribute="bottom" constant="28" id="uu3-yH-0Y2"/>
+                            <constraint firstItem="hMi-1K-trH" firstAttribute="leading" secondItem="JWR-Aa-IhE" secondAttribute="leadingMargin" id="vYN-Ve-5pz"/>
+                            <constraint firstItem="x4D-hy-776" firstAttribute="leading" secondItem="JWR-Aa-IhE" secondAttribute="leadingMargin" id="wBk-CZ-1um"/>
+                            <constraint firstItem="3BO-5g-OOZ" firstAttribute="top" secondItem="o0D-uv-NbZ" secondAttribute="bottom" constant="20" id="xcc-K3-0i9"/>
+                            <constraint firstItem="HDo-SL-LOU" firstAttribute="top" secondItem="iYL-wB-diI" secondAttribute="bottom" constant="32" id="z5v-ol-2ez"/>
+                            <constraint firstItem="s93-2G-1lt" firstAttribute="leading" secondItem="JWR-Aa-IhE" secondAttribute="leadingMargin" id="zTK-aZ-yWJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="QueBtn" destination="BLK-hC-akg" id="kIS-Hv-XHX"/>
+                        <outlet property="babyCloud" destination="lLW-3c-wlC" id="HUg-PI-pYV"/>
+                        <outlet property="cloudEyes" destination="HDo-SL-LOU" id="5bn-Dx-G35"/>
+                        <outlet property="elephantSpeed" destination="hrb-8G-jRb" id="ZUR-e5-FsK"/>
+                        <outlet property="musicSwitch" destination="iYL-wB-diI" id="uou-fs-OpF"/>
+                        <outlet property="turnSpeed" destination="LhI-3s-uwW" id="qxZ-M4-K5g"/>
+                        <outlet property="windmillSpeed" destination="otz-Jd-CwL" id="YHz-r2-IZd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d13-PN-gKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-672" y="640"/>
+        </scene>
+        <!--Reveal View Controller-->
+        <scene sceneID="AAd-U7-o57">
+            <objects>
+                <viewController id="0eS-Dy-gpp" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Roq-5w-ImS"/>
+                        <viewControllerLayoutGuide type="bottom" id="bMU-1i-Ndz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7W5-ql-Vqi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="0Oh-MB-LH0" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="aw3-Rf-jH1"/>
+                        <segue destination="f6G-f3-VGn" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="ry6-o6-SdS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4xV-XC-ATz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-846" y="-349.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Tzu-UU-tXr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Oh-MB-LH0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cLG-Ny-FdB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BV1-FR-VrT" kind="relationship" relationship="rootViewController" id="daU-M1-Iw2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rby-lh-wvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="195" y="-349.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="settings" width="40" height="40"/>
+    </resources>
 </document>

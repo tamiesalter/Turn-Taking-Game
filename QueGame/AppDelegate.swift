@@ -7,19 +7,47 @@
 //
 
 import UIKit
-
+import SpriteKit
+import Foundation
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    var model1 = TheModel()
+    var mill = SKSpriteNode()
+    var someAction = SKAction()
+    var forever = SKAction()
+    //switch and slider values being declared 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        model1.millSpeed = 2
+        model1.ballSpeed = 200
+        model1.turn = 4.0
+        model1.music = false
+        model1.baby = false
+        model1.b = false
+        model1.eyes = true
+        model1.eyeTemp = true
+        model1.bg = SKAudioNode()
+        someAction = SKAction.rotateByAngle(CGFloat(M_PI), duration:(appDelegate.model1.millSpeed))
+        forever = SKAction.repeatActionForever(someAction)
+        mill.runAction(forever)
         return true
     }
-
-    func applicationWillResignActive(application: UIApplication) {
+    
+    
+    //action for mill rotation
+    func runAction() {
+        mill.removeAllActions()
+        someAction = SKAction.rotateByAngle(CGFloat(M_PI), duration:(appDelegate.model1.millSpeed))
+        forever = SKAction.repeatActionForever(someAction)
+        mill.runAction(forever)
+        
+        }
+    
+        
+    
+    
+        func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     }

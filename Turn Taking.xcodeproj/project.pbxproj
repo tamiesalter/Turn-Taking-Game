@@ -1,0 +1,648 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C2C9C151CDA4EC3004CE1DE /* TheModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C9C141CDA4EC3004CE1DE /* TheModel.swift */; };
+		2C2DFDFA1CE267D900323088 /* Spark.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2C2DFDF91CE267D900323088 /* Spark.sks */; };
+		2C864A631CEE4F7C00345C2D /* Blur.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 2C864A621CEE4F7C00345C2D /* Blur.fsh */; };
+		2CA1768D1CEF5ED400DFE232 /* babyCloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA1768C1CEF5ED400DFE232 /* babyCloud.png */; };
+		2CA176901CEF5F4400DFE232 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA1768F1CEF5F4400DFE232 /* SWRevealViewController.m */; };
+		2CA3F73F1CDD311A00AF71A8 /* Rain.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3F73E1CDD311A00AF71A8 /* Rain.sks */; };
+		2CCE03691CEA1E12007C3D04 /* cannon.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE03661CEA1E12007C3D04 /* cannon.wav */; };
+		2CCE036A1CEA1E12007C3D04 /* hit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE03671CEA1E12007C3D04 /* hit.wav */; };
+		2CCE03701CEA2DE9007C3D04 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE036F1CEA2DE9007C3D04 /* music.mp3 */; };
+		2CCE03761CEA340A007C3D04 /* eyes.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE03751CEA340A007C3D04 /* eyes.png */; };
+		2CCE03781CEA3AD7007C3D04 /* eyes2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE03771CEA3AD7007C3D04 /* eyes2.png */; };
+		2CCE037A1CEA3B66007C3D04 /* eyes1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE03791CEA3B66007C3D04 /* eyes1.png */; };
+		2CCE03841CEA674E007C3D04 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE03831CEA674E007C3D04 /* MainMenuViewController.swift */; };
+		2CCE03971CEB799E007C3D04 /* go.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE03961CEB799E007C3D04 /* go.sks */; };
+		2CCE03991CEB7E9B007C3D04 /* go1.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE03981CEB7E9B007C3D04 /* go1.sks */; };
+		2CCE039B1CEB8A79007C3D04 /* Water.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE039A1CEB8A79007C3D04 /* Water.mp3 */; };
+		2CDD3C821CD8FC1C003994C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDD3C811CD8FC1C003994C7 /* AppDelegate.swift */; };
+		2CDD3C841CD8FC1C003994C7 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2CDD3C831CD8FC1C003994C7 /* GameScene.sks */; };
+		2CDD3C861CD8FC1C003994C7 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDD3C851CD8FC1C003994C7 /* GameScene.swift */; };
+		2CDD3C881CD8FC1C003994C7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDD3C871CD8FC1C003994C7 /* GameViewController.swift */; };
+		2CDD3C8B1CD8FC1C003994C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CDD3C891CD8FC1C003994C7 /* Main.storyboard */; };
+		2CDD3C8D1CD8FC1C003994C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CDD3C8C1CD8FC1C003994C7 /* Assets.xcassets */; };
+		2CDD3C901CD8FC1C003994C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CDD3C8E1CD8FC1C003994C7 /* LaunchScreen.storyboard */; };
+		2CDD3C9B1CD8FC1C003994C7 /* QueGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDD3C9A1CD8FC1C003994C7 /* QueGameTests.swift */; };
+		2CDD3CA61CD8FC1C003994C7 /* QueGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDD3CA51CD8FC1C003994C7 /* QueGameUITests.swift */; };
+		2CDD3CB41CD9113C003994C7 /* Ball.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2CDD3CB31CD9113C003994C7 /* Ball.sks */; };
+		2CE686501CEE35A1007A6209 /* babyCloud.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2CE6864F1CEE35A1007A6209 /* babyCloud.sks */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CDD3C971CD8FC1C003994C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CDD3C761CD8FC1C003994C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CDD3C7D1CD8FC1C003994C7;
+			remoteInfo = QueGame;
+		};
+		2CDD3CA21CD8FC1C003994C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CDD3C761CD8FC1C003994C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CDD3C7D1CD8FC1C003994C7;
+			remoteInfo = QueGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C2C9C141CDA4EC3004CE1DE /* TheModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TheModel.swift; path = ../TheModel.swift; sourceTree = "<group>"; };
+		2C2DFDF91CE267D900323088 /* Spark.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Spark.sks; path = ../Spark.sks; sourceTree = "<group>"; };
+		2C864A621CEE4F7C00345C2D /* Blur.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Blur.fsh; sourceTree = "<group>"; };
+		2CA1768C1CEF5ED400DFE232 /* babyCloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = babyCloud.png; sourceTree = SOURCE_ROOT; };
+		2CA1768E1CEF5F4400DFE232 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = SOURCE_ROOT; };
+		2CA1768F1CEF5F4400DFE232 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
+		2CA3F73E1CDD311A00AF71A8 /* Rain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Rain.sks; sourceTree = "<group>"; };
+		2CCE03661CEA1E12007C3D04 /* cannon.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cannon.wav; sourceTree = SOURCE_ROOT; };
+		2CCE03671CEA1E12007C3D04 /* hit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hit.wav; sourceTree = SOURCE_ROOT; };
+		2CCE036F1CEA2DE9007C3D04 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = SOURCE_ROOT; };
+		2CCE03751CEA340A007C3D04 /* eyes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyes.png; sourceTree = SOURCE_ROOT; };
+		2CCE03771CEA3AD7007C3D04 /* eyes2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyes2.png; sourceTree = SOURCE_ROOT; };
+		2CCE03791CEA3B66007C3D04 /* eyes1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyes1.png; sourceTree = SOURCE_ROOT; };
+		2CCE03831CEA674E007C3D04 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainMenuViewController.swift; path = ../MainMenuViewController.swift; sourceTree = "<group>"; };
+		2CCE03871CEB5859007C3D04 /* QueGame-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QueGame-Bridging-Header.h"; sourceTree = "<group>"; };
+		2CCE03961CEB799E007C3D04 /* go.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = go.sks; path = ../go.sks; sourceTree = "<group>"; };
+		2CCE03981CEB7E9B007C3D04 /* go1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = go1.sks; sourceTree = "<group>"; };
+		2CCE039A1CEB8A79007C3D04 /* Water.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Water.mp3; sourceTree = SOURCE_ROOT; };
+		2CDD3C7E1CD8FC1C003994C7 /* Turn Taking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Turn Taking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CDD3C811CD8FC1C003994C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2CDD3C831CD8FC1C003994C7 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		2CDD3C851CD8FC1C003994C7 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		2CDD3C871CD8FC1C003994C7 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		2CDD3C8A1CD8FC1C003994C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2CDD3C8C1CD8FC1C003994C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CDD3C8F1CD8FC1C003994C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2CDD3C911CD8FC1C003994C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CDD3C961CD8FC1C003994C7 /* Turn Taking.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Turn Taking.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CDD3C9A1CD8FC1C003994C7 /* QueGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueGameTests.swift; sourceTree = "<group>"; };
+		2CDD3C9C1CD8FC1C003994C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CDD3CA11CD8FC1C003994C7 /* Turn Taking.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Turn Taking.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CDD3CA51CD8FC1C003994C7 /* QueGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueGameUITests.swift; sourceTree = "<group>"; };
+		2CDD3CA71CD8FC1C003994C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CDD3CB31CD9113C003994C7 /* Ball.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Ball.sks; sourceTree = "<group>"; };
+		2CE6864F1CEE35A1007A6209 /* babyCloud.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = babyCloud.sks; sourceTree = "<group>"; };
+		2CFD64281CF73EE100BE1A02 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Main.strings; sourceTree = "<group>"; };
+		2CFD64291CF73EE100BE1A02 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		2CFD642A1CF7415300BE1A02 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Main.strings; sourceTree = "<group>"; };
+		2CFD642B1CF7415300BE1A02 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		2CFD642C1CF7433D00BE1A02 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		2CFD642D1CF7433D00BE1A02 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		2CFD642E1CF7446A00BE1A02 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		2CFD642F1CF7446A00BE1A02 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		2CFD64301CF7457A00BE1A02 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
+		2CFD64311CF7457A00BE1A02 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		2CFD64321CF746B900BE1A02 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		2CFD64331CF746B900BE1A02 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		2CFD64351CF7501C00BE1A02 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		2CFD64391CF7514500BE1A02 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		2CFD643A1CF7514500BE1A02 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CDD3C7B1CD8FC1C003994C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CDD3C931CD8FC1C003994C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CDD3C9E1CD8FC1C003994C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CCE03851CEB57A7007C3D04 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2CA1768E1CEF5F4400DFE232 /* SWRevealViewController.h */,
+				2CA1768F1CEF5F4400DFE232 /* SWRevealViewController.m */,
+				2CCE03871CEB5859007C3D04 /* QueGame-Bridging-Header.h */,
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		2CDD3C751CD8FC1C003994C7 = {
+			isa = PBXGroup;
+			children = (
+				2CDD3C801CD8FC1C003994C7 /* QueGame */,
+				2CDD3C991CD8FC1C003994C7 /* QueGameTests */,
+				2CDD3CA41CD8FC1C003994C7 /* QueGameUITests */,
+				2CDD3C7F1CD8FC1C003994C7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2CDD3C7F1CD8FC1C003994C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CDD3C7E1CD8FC1C003994C7 /* Turn Taking.app */,
+				2CDD3C961CD8FC1C003994C7 /* Turn Taking.xctest */,
+				2CDD3CA11CD8FC1C003994C7 /* Turn Taking.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CDD3C801CD8FC1C003994C7 /* QueGame */ = {
+			isa = PBXGroup;
+			children = (
+				2CCE03851CEB57A7007C3D04 /* SWRevealViewController */,
+				2C2C9C141CDA4EC3004CE1DE /* TheModel.swift */,
+				2CDD3C811CD8FC1C003994C7 /* AppDelegate.swift */,
+				2CCE03831CEA674E007C3D04 /* MainMenuViewController.swift */,
+				2CDD3C871CD8FC1C003994C7 /* GameViewController.swift */,
+				2CDD3C851CD8FC1C003994C7 /* GameScene.swift */,
+				2CDD3C891CD8FC1C003994C7 /* Main.storyboard */,
+				2C864A621CEE4F7C00345C2D /* Blur.fsh */,
+				2CDD3C831CD8FC1C003994C7 /* GameScene.sks */,
+				2CDD3CB31CD9113C003994C7 /* Ball.sks */,
+				2CE6864F1CEE35A1007A6209 /* babyCloud.sks */,
+				2CA3F73E1CDD311A00AF71A8 /* Rain.sks */,
+				2CCE03961CEB799E007C3D04 /* go.sks */,
+				2CCE03981CEB7E9B007C3D04 /* go1.sks */,
+				2C2DFDF91CE267D900323088 /* Spark.sks */,
+				2CA1768C1CEF5ED400DFE232 /* babyCloud.png */,
+				2CCE03771CEA3AD7007C3D04 /* eyes2.png */,
+				2CCE03791CEA3B66007C3D04 /* eyes1.png */,
+				2CCE03751CEA340A007C3D04 /* eyes.png */,
+				2CCE036F1CEA2DE9007C3D04 /* music.mp3 */,
+				2CCE039A1CEB8A79007C3D04 /* Water.mp3 */,
+				2CCE03661CEA1E12007C3D04 /* cannon.wav */,
+				2CCE03671CEA1E12007C3D04 /* hit.wav */,
+				2CDD3C8C1CD8FC1C003994C7 /* Assets.xcassets */,
+				2CDD3C8E1CD8FC1C003994C7 /* LaunchScreen.storyboard */,
+				2CDD3C911CD8FC1C003994C7 /* Info.plist */,
+			);
+			path = QueGame;
+			sourceTree = "<group>";
+		};
+		2CDD3C991CD8FC1C003994C7 /* QueGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				2CDD3C9A1CD8FC1C003994C7 /* QueGameTests.swift */,
+				2CDD3C9C1CD8FC1C003994C7 /* Info.plist */,
+			);
+			path = QueGameTests;
+			sourceTree = "<group>";
+		};
+		2CDD3CA41CD8FC1C003994C7 /* QueGameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2CDD3CA51CD8FC1C003994C7 /* QueGameUITests.swift */,
+				2CDD3CA71CD8FC1C003994C7 /* Info.plist */,
+			);
+			path = QueGameUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CDD3C7D1CD8FC1C003994C7 /* Turn Taking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CDD3CAA1CD8FC1C003994C7 /* Build configuration list for PBXNativeTarget "Turn Taking" */;
+			buildPhases = (
+				2CDD3C7A1CD8FC1C003994C7 /* Sources */,
+				2CDD3C7B1CD8FC1C003994C7 /* Frameworks */,
+				2CDD3C7C1CD8FC1C003994C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Turn Taking";
+			productName = QueGame;
+			productReference = 2CDD3C7E1CD8FC1C003994C7 /* Turn Taking.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2CDD3C951CD8FC1C003994C7 /* Turn TakingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CDD3CAD1CD8FC1C003994C7 /* Build configuration list for PBXNativeTarget "Turn TakingTests" */;
+			buildPhases = (
+				2CDD3C921CD8FC1C003994C7 /* Sources */,
+				2CDD3C931CD8FC1C003994C7 /* Frameworks */,
+				2CDD3C941CD8FC1C003994C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CDD3C981CD8FC1C003994C7 /* PBXTargetDependency */,
+			);
+			name = "Turn TakingTests";
+			productName = QueGameTests;
+			productReference = 2CDD3C961CD8FC1C003994C7 /* Turn Taking.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2CDD3CA01CD8FC1C003994C7 /* Turn TakingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CDD3CB01CD8FC1C003994C7 /* Build configuration list for PBXNativeTarget "Turn TakingUITests" */;
+			buildPhases = (
+				2CDD3C9D1CD8FC1C003994C7 /* Sources */,
+				2CDD3C9E1CD8FC1C003994C7 /* Frameworks */,
+				2CDD3C9F1CD8FC1C003994C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CDD3CA31CD8FC1C003994C7 /* PBXTargetDependency */,
+			);
+			name = "Turn TakingUITests";
+			productName = QueGameUITests;
+			productReference = 2CDD3CA11CD8FC1C003994C7 /* Turn Taking.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CDD3C761CD8FC1C003994C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Thomas jordan";
+				TargetAttributes = {
+					2CDD3C7D1CD8FC1C003994C7 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = T5DW6G4J4D;
+					};
+					2CDD3C951CD8FC1C003994C7 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = T5DW6G4J4D;
+						TestTargetID = 2CDD3C7D1CD8FC1C003994C7;
+					};
+					2CDD3CA01CD8FC1C003994C7 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = T5DW6G4J4D;
+						TestTargetID = 2CDD3C7D1CD8FC1C003994C7;
+					};
+				};
+			};
+			buildConfigurationList = 2CDD3C791CD8FC1C003994C7 /* Build configuration list for PBXProject "Turn Taking" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2CDD3C751CD8FC1C003994C7;
+			productRefGroup = 2CDD3C7F1CD8FC1C003994C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CDD3C7D1CD8FC1C003994C7 /* Turn Taking */,
+				2CDD3C951CD8FC1C003994C7 /* Turn TakingTests */,
+				2CDD3CA01CD8FC1C003994C7 /* Turn TakingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CDD3C7C1CD8FC1C003994C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CCE039B1CEB8A79007C3D04 /* Water.mp3 in Resources */,
+				2CCE036A1CEA1E12007C3D04 /* hit.wav in Resources */,
+				2CDD3C841CD8FC1C003994C7 /* GameScene.sks in Resources */,
+				2CA1768D1CEF5ED400DFE232 /* babyCloud.png in Resources */,
+				2CCE03761CEA340A007C3D04 /* eyes.png in Resources */,
+				2C864A631CEE4F7C00345C2D /* Blur.fsh in Resources */,
+				2CCE03991CEB7E9B007C3D04 /* go1.sks in Resources */,
+				2CDD3C901CD8FC1C003994C7 /* LaunchScreen.storyboard in Resources */,
+				2CCE03971CEB799E007C3D04 /* go.sks in Resources */,
+				2CCE03781CEA3AD7007C3D04 /* eyes2.png in Resources */,
+				2CCE03691CEA1E12007C3D04 /* cannon.wav in Resources */,
+				2CDD3C8D1CD8FC1C003994C7 /* Assets.xcassets in Resources */,
+				2CE686501CEE35A1007A6209 /* babyCloud.sks in Resources */,
+				2C2DFDFA1CE267D900323088 /* Spark.sks in Resources */,
+				2CCE037A1CEA3B66007C3D04 /* eyes1.png in Resources */,
+				2CCE03701CEA2DE9007C3D04 /* music.mp3 in Resources */,
+				2CA3F73F1CDD311A00AF71A8 /* Rain.sks in Resources */,
+				2CDD3CB41CD9113C003994C7 /* Ball.sks in Resources */,
+				2CDD3C8B1CD8FC1C003994C7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CDD3C941CD8FC1C003994C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CDD3C9F1CD8FC1C003994C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CDD3C7A1CD8FC1C003994C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CA176901CEF5F4400DFE232 /* SWRevealViewController.m in Sources */,
+				2CCE03841CEA674E007C3D04 /* MainMenuViewController.swift in Sources */,
+				2CDD3C861CD8FC1C003994C7 /* GameScene.swift in Sources */,
+				2CDD3C881CD8FC1C003994C7 /* GameViewController.swift in Sources */,
+				2CDD3C821CD8FC1C003994C7 /* AppDelegate.swift in Sources */,
+				2C2C9C151CDA4EC3004CE1DE /* TheModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CDD3C921CD8FC1C003994C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CDD3C9B1CD8FC1C003994C7 /* QueGameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CDD3C9D1CD8FC1C003994C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CDD3CA61CD8FC1C003994C7 /* QueGameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CDD3C981CD8FC1C003994C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CDD3C7D1CD8FC1C003994C7 /* Turn Taking */;
+			targetProxy = 2CDD3C971CD8FC1C003994C7 /* PBXContainerItemProxy */;
+		};
+		2CDD3CA31CD8FC1C003994C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CDD3C7D1CD8FC1C003994C7 /* Turn Taking */;
+			targetProxy = 2CDD3CA21CD8FC1C003994C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2CDD3C891CD8FC1C003994C7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CDD3C8A1CD8FC1C003994C7 /* Base */,
+				2CFD64281CF73EE100BE1A02 /* da */,
+				2CFD642A1CF7415300BE1A02 /* nl */,
+				2CFD642C1CF7433D00BE1A02 /* pt-BR */,
+				2CFD642E1CF7446A00BE1A02 /* es */,
+				2CFD64301CF7457A00BE1A02 /* it */,
+				2CFD64321CF746B900BE1A02 /* de */,
+				2CFD64351CF7501C00BE1A02 /* en */,
+				2CFD64391CF7514500BE1A02 /* fr */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2CDD3C8E1CD8FC1C003994C7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CDD3C8F1CD8FC1C003994C7 /* Base */,
+				2CFD64291CF73EE100BE1A02 /* da */,
+				2CFD642B1CF7415300BE1A02 /* nl */,
+				2CFD642D1CF7433D00BE1A02 /* pt-BR */,
+				2CFD642F1CF7446A00BE1A02 /* es */,
+				2CFD64311CF7457A00BE1A02 /* it */,
+				2CFD64331CF746B900BE1A02 /* de */,
+				2CFD643A1CF7514500BE1A02 /* fr */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2CDD3CA81CD8FC1C003994C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2CDD3CA91CD8FC1C003994C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2CDD3CAB1CD8FC1C003994C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = QueGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = appbuddys.QueGame;
+				PRODUCT_NAME = "Turn Taking";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "QueGame/QueGame-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2CDD3CAC1CD8FC1C003994C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = QueGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = appbuddys.QueGame;
+				PRODUCT_NAME = "Turn Taking";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "QueGame/QueGame-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		2CDD3CAE1CD8FC1C003994C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = QueGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = appbuddys.QueGameTests;
+				PRODUCT_NAME = "Turn Taking";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Turn Taking.app/Turn Taking";
+			};
+			name = Debug;
+		};
+		2CDD3CAF1CD8FC1C003994C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = QueGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = appbuddys.QueGameTests;
+				PRODUCT_NAME = "Turn Taking";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Turn Taking.app/Turn Taking";
+			};
+			name = Release;
+		};
+		2CDD3CB11CD8FC1C003994C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = QueGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = appbuddys.QueGameUITests;
+				PRODUCT_NAME = "Turn Taking";
+				TEST_TARGET_NAME = QueGame;
+			};
+			name = Debug;
+		};
+		2CDD3CB21CD8FC1C003994C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QueGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = appbuddys.QueGameUITests;
+				PRODUCT_NAME = "Turn Taking";
+				TEST_TARGET_NAME = QueGame;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CDD3C791CD8FC1C003994C7 /* Build configuration list for PBXProject "Turn Taking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CDD3CA81CD8FC1C003994C7 /* Debug */,
+				2CDD3CA91CD8FC1C003994C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CDD3CAA1CD8FC1C003994C7 /* Build configuration list for PBXNativeTarget "Turn Taking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CDD3CAB1CD8FC1C003994C7 /* Debug */,
+				2CDD3CAC1CD8FC1C003994C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CDD3CAD1CD8FC1C003994C7 /* Build configuration list for PBXNativeTarget "Turn TakingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CDD3CAE1CD8FC1C003994C7 /* Debug */,
+				2CDD3CAF1CD8FC1C003994C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CDD3CB01CD8FC1C003994C7 /* Build configuration list for PBXNativeTarget "Turn TakingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CDD3CB11CD8FC1C003994C7 /* Debug */,
+				2CDD3CB21CD8FC1C003994C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2CDD3C761CD8FC1C003994C7 /* Project object */;
+}
