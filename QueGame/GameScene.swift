@@ -4,7 +4,7 @@
 //
 //  Created by Thomas jordan on 2016-05-03.
 //  Copyright (c) 2016 Thomas jordan. All rights reserved.
-// asdas
+//
 
 import SpriteKit
 import Foundation
