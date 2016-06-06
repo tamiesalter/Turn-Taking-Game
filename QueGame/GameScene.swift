@@ -23,7 +23,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     var cloudPosition: SKSpriteNode!
     var touchLocation:CGPoint = CGPointZero
     var eyes: SKSpriteNode!
-    var viewController: UIViewController?
+    var viewController: UIViewController!
     var sparkEmmiter = SKEmitterNode()
     var userlbl = 0
     var cloudlbl = 0
@@ -75,12 +75,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         moveCloud()
         let babyCloudTexture = SKTexture(imageNamed: "babyCloud.png")
         babyCloud = SKSpriteNode(imageNamed: "babyCloud")
-        babyCloud.setScale(0.8)
+        //babyCloud.setScale(0.5)
+        //babyCloud.size.height = 150
+        //babyCloud.size.width = 300
         babyCloud.physicsBody = SKPhysicsBody(texture: babyCloudTexture, size: babyCloudTexture.size())
-        babyCloud.physicsBody?.dynamic = false
-        babyCloud.physicsBody?.usesPreciseCollisionDetection
+        babyCloud.physicsBody!.dynamic = false
+//babyCloudEyes.physicsBody.
+        //babyCloud.physicsBody!.usesPreciseCollisionDetection
         babyCloud.name = "babyCloud"
-        babyCloud.physicsBody!.categoryBitMask = targetMask
+        babyCloud.physicsBody!.categoryBitMask = babyMask
         babyCloud.zPosition = 3
         babyCloud.position = CGPoint(x:CGRectGetMaxX(self.frame)+500, y: CGRectGetMinY(self.frame)+1000+move)
         babyCloud.runAction(moveAndRemoveCloud)
@@ -95,8 +98,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         let babyCloudEyesTexture = SKTexture(imageNamed: "eyes.png")
         babyCloudEyes = SKSpriteNode(texture: babyCloudEyesTexture)
         babyCloudEyes.position = CGPoint(x:CGRectGetMaxX(self.frame)+500, y: CGRectGetMinY(self.frame)+1000+move)
-        babyCloudEyes.size.height = 150
-        babyCloudEyes.size.width = 300
+        babyCloudEyes.size.height = 250
+        babyCloudEyes.size.width = 400
         babyCloudEyes.zPosition = 5
         babyCloudEyes.runAction(moveAndRemoveCloud)
         self.addChild(babyCloudEyes)
@@ -126,14 +129,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         let speed = CGFloat(appDelegate.model1.ballSpeed)
         let vx:CGFloat = CGFloat(cosf(angleInRadians)) * speed
         let vy:CGFloat = CGFloat(sinf(angleInRadians)) * speed
-        ball.physicsBody?.applyImpulse(CGVectorMake(vx, vy))
-        ball.physicsBody?.collisionBitMask = wallMask | ballMask | targetMask | babyMask
-        ball.physicsBody?.contactTestBitMask = ball.physicsBody!.collisionBitMask
+        ball.physicsBody!.applyImpulse(CGVectorMake(vx, vy))
+        ball.physicsBody!.collisionBitMask = wallMask | targetMask | babyMask
+        ball.physicsBody!.contactTestBitMask = ball.physicsBody!.collisionBitMask
         let Rain:SKSpriteNode = SKScene(fileNamed: "Rain")!.childNodeWithName("Rain")! as! SKSpriteNode
         Rain.removeFromParent()
         Rain.position = self.cloud.position
-        Rain.physicsBody?.collisionBitMask = wallMask | ballMask | targetMask | babyMask
-        Rain.physicsBody?.contactTestBitMask = Rain.physicsBody!.collisionBitMask
+        Rain.physicsBody!.collisionBitMask = wallMask | targetMask | babyMask
+        Rain.physicsBody!.contactTestBitMask = Rain.physicsBody!.collisionBitMask
         turn = false
         self.sparkEmmiter.particleBirthRate = 200
         delay(appDelegate.model1.turn - 2){
@@ -166,10 +169,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
             cloudlbl += 1
             cloudLabel.text = String(cloudlbl)
         }
-        if baby.categoryBitMask == ballMask {
+        if baby.categoryBitMask == ballMask || baby.categoryBitMask == rainMask {
             self.didHitBall(baby)
             
+            let poof: SKEmitterNode = SKEmitterNode(fileNamed:"poof")!
+            poof.position = babyCloud.position
+            self.addChild(poof)
+            babyCloud.removeFromParent()
+            babyCloudEyes.removeFromParent()
+
         }
+        
     }
     
     
@@ -230,19 +240,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     //colors depending on who’s turn it is then showing a spark and
     //removing  the ball from its parent
     func didHitBall(Rain:SKPhysicsBody){
-        let blue = UIColor(red: 0.16, green: 0.73, blue: 0.78, alpha: 1.0)
         let orange = UIColor(red: 1.0, green: 0.45, blue: 0.0, alpha: 1.0)
         let spark: SKEmitterNode = SKEmitterNode(fileNamed:"Spark")!
         spark.position = Rain.node!.position
-        spark.particleColor = (Rain.categoryBitMask == ballMask) ? orange :blue
+        spark.particleColor = orange//(Rain.categoryBitMask == ballMask) orange blue
         self.addChild(spark)
-        Rain.node?.removeFromParent()
+        Rain.node!.removeFromParent()
         self.runAction(SKAction.playSoundFileNamed("hit.wav", waitForCompletion: true))
     }
     
     
     
-    //This function is called continuously so using if 
+    //This function is called continuously so using if
     //statements and a number a Boolean variables in the 
     //appDelegate it is possible to use function without issues
     override func update(currentTime: CFTimeInterval) {
@@ -298,19 +307,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     
     
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent!) {
         touchLocation = touches.first!.locationInNode(self)
     }
     
     
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent!) {
         touchLocation = touches.first!.locationInNode(self)
     }
     
     
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent!) {
         if turn == true {
             userShoot()
         }
