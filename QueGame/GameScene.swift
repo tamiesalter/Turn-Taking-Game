@@ -15,13 +15,16 @@ var turn = true
 
 class GameScene: SKScene, SKPhysicsContactDelegate{
     var cannon: SKSpriteNode!
+    var cannon_full = SKSpriteNode()
+    var millHouse = SKSpriteNode()
+    var CScore = SKSpriteNode()
+    var EScore = SKSpriteNode()
     var cloud: SKSpriteNode!
     var cloudPosition: SKSpriteNode!
     var touchLocation:CGPoint = CGPointZero
     var eyes: SKSpriteNode!
     var viewController: UIViewController?
     var sparkEmmiter = SKEmitterNode()
-    var test2 = NSTimeInterval()
     var userlbl = 0
     var cloudlbl = 0
     var action = SKAction()
@@ -29,6 +32,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     let ballMask:UInt32 = 0x1 << 1 //2
     let rainMask:UInt32 = 0x1 << 2 //4
     let targetMask:UInt32 = 0x1 << 3 //8
+    let babyMask:UInt32 = 0x1 << 4 //16
     var scoreLabel = SKLabelNode()
     var cloudLabel = SKLabelNode()
     var babyCloudEyes = SKSpriteNode()
@@ -39,35 +43,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     var moveAndRemoveCloud = SKAction()
     var movementAmount = arc4random()
     
+    
+    
     /*Call function when first launched add the score  labels then  add
     background music declare sprites such as mill and cannon,
     call function to add action for movement such as mill turning
     and blinking eyes on cloud, add NSTimer for spawning clouds to
     move across screen*/
     override func didMoveToView(view: SKView) {
-        
-        let bg = self.childNodeWithName("bg") as! SKSpriteNode
-        bg.size.height = (scene!.size.height)
-        bg.size.width = (scene!.size.width)*2
-        bg.anchorPoint = (scene!.anchorPoint)
-        bg.position = (scene!.position)
+               // screenSize()
         addScoreLable()
         appDelegate.model1.bg = SKAudioNode(fileNamed: "music.mp3")
         addChild(appDelegate.model1.bg)
         appDelegate.mill = self.childNodeWithName("mill") as! SKSpriteNode
         appDelegate.runAction()
         cannon = self.childNodeWithName("cannon") as! SKSpriteNode
-        cannon.position = CGPoint(x:CGRectGetMaxX(self.frame)/2, y: CGRectGetMinY(self.frame) + 35)
-        let cannonFull = self.childNodeWithName("cannon_full") as! SKSpriteNode
-        cannonFull.position = CGPoint(x:CGRectGetMaxX(self.frame)/2, y: CGRectGetMinY(self.frame) + 25)
-        let millHouse = self.childNodeWithName("millHouse") as! SKSpriteNode
-        millHouse.anchorPoint = CGPoint(x:CGRectGetMaxX(self.frame)/2, y: CGRectGetMinY(self.frame) )
         cloud = self.childNodeWithName("cloud") as! SKSpriteNode
         cloudPosition = self.childNodeWithName("cloudPosition") as! SKSpriteNode
         self.physicsWorld.contactDelegate = self
         addRain()
-        print(self.frame.size)
-        self.scaleMode = SKSceneScaleMode.AspectFit
+        
+
                     }
     
     
@@ -106,6 +102,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         self.addChild(babyCloudEyes)
     }
     
+    
+    
     func moveCloud(){
         let moveCloud = SKAction.moveByX(-self.frame.size.width * 2, y: 0, duration: NSTimeInterval(self.frame.size.width/100))
         let removeCoud = SKAction.removeFromParent()
@@ -129,12 +127,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         let vx:CGFloat = CGFloat(cosf(angleInRadians)) * speed
         let vy:CGFloat = CGFloat(sinf(angleInRadians)) * speed
         ball.physicsBody?.applyImpulse(CGVectorMake(vx, vy))
-        ball.physicsBody?.collisionBitMask = wallMask | ballMask | targetMask | rainMask
+        ball.physicsBody?.collisionBitMask = wallMask | ballMask | targetMask | babyMask
         ball.physicsBody?.contactTestBitMask = ball.physicsBody!.collisionBitMask
         let Rain:SKSpriteNode = SKScene(fileNamed: "Rain")!.childNodeWithName("Rain")! as! SKSpriteNode
         Rain.removeFromParent()
         Rain.position = self.cloud.position
-        Rain.physicsBody?.collisionBitMask = wallMask | ballMask | targetMask | rainMask
+        Rain.physicsBody?.collisionBitMask = wallMask | ballMask | targetMask | babyMask
         Rain.physicsBody?.contactTestBitMask = Rain.physicsBody!.collisionBitMask
         turn = false
         self.sparkEmmiter.particleBirthRate = 200
@@ -156,6 +154,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     func didBeginContact(contact: SKPhysicsContact) {
         let target = (contact.bodyA.categoryBitMask == targetMask) ? contact.bodyA : contact.bodyB
         let other = (target == contact.bodyA) ? contact.bodyB : contact.bodyA
+        let target2 = (contact.bodyA.categoryBitMask == babyMask) ? contact.bodyA : contact.bodyB
+        let baby = (target2 == contact.bodyA) ? contact.bodyB : contact.bodyA
         if other.categoryBitMask == ballMask {
             self.didHitBall(other)
             userlbl += 1
@@ -166,21 +166,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
             cloudlbl += 1
             cloudLabel.text = String(cloudlbl)
         }
+        if baby.categoryBitMask == ballMask {
+            self.didHitBall(baby)
+            
+        }
     }
     
     
     
     //adding both score lables
     func addScoreLable(){
+        EScore = self.childNodeWithName("EScore") as! SKSpriteNode
         scoreLabel.fontName = "Helvetica"
         scoreLabel.fontSize = 60
         scoreLabel.text = "0"
-        scoreLabel.position = CGPointMake(self.frame.size.width - 100, self.frame.size.height - 400)
-        self.addChild(scoreLabel)
+        scoreLabel.position.x = EScore.position.x
+        scoreLabel.position.y = EScore.position.y - 160
+       self.addChild(scoreLabel)
+        CScore = self.childNodeWithName("CScore") as! SKSpriteNode
         cloudLabel.fontName = "Helvetica"
         cloudLabel.fontSize = 60
         cloudLabel.text = "0"
-        cloudLabel.position = CGPointMake(self.frame.size.width - 1000, self.frame.size.height - 400)
+        cloudLabel.position.x = CScore.position.x
+        cloudLabel.position.y = CScore.position.y - 160
         self.addChild(cloudLabel)
     }
     

@@ -11,7 +11,7 @@ import SpriteKit
 
 class GameViewController: UIViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
-
+    var name = String()
     
     
     override func viewDidLoad() {
@@ -24,20 +24,37 @@ class GameViewController: UIViewController {
             menuButton.target = self.revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            print(UIDevice().systemName)
+            if (UIDevice().name) == "iPad Simulator" || (UIDevice().name) == "iPad" {
+                name = "GameScene2"
+            }else {
+                name = "GameScene"
+            }
+           // if (UIDevice().name) == "iPhone"
         }
-        if let scene = GameScene(fileNamed:"GameScene") {
+        
+        
+        if let scene = GameScene(fileNamed:name) {
             // Configure the view.
             let skView = self.view as! SKView
-            skView.showsFPS = true
-            skView.showsNodeCount = true
-            /* Sprite Kit applies additional optimizations to improve rendering performance */
+            //scene.size = skView.bounds.size
+
+            skView.showsFPS = false
+            skView.showsNodeCount = false
+            /* Sprite Kit applies additil optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
             /* Set the scale mode to scale to fit the window */
-            scene.scaleMode = .AspectFill
             scene.viewController = self
-            scene.size = skView.bounds.size
+            //scene.size = skView.bounds.size
+            scene.scaleMode = .Fill
             skView.presentScene(scene)
+            //bg.sendSub(self.view)
+            
         }
+        
+        
+        
+        
     }
 
     

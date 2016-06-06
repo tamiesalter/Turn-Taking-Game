@@ -13,7 +13,7 @@ void main(void) {
     }
     
     
-    gl_FragColor = ( sum / 13.0 ) ;
+    gl_FragColor = ( sum / 15.0 ) ;
     
     
 }

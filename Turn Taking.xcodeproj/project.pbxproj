@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C2C9C151CDA4EC3004CE1DE /* TheModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C9C141CDA4EC3004CE1DE /* TheModel.swift */; };
 		2C2DFDFA1CE267D900323088 /* Spark.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2C2DFDF91CE267D900323088 /* Spark.sks */; };
+		2C5E04401D05CA1700127483 /* GameScene2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2C5E043F1D05CA1700127483 /* GameScene2.sks */; };
 		2C864A631CEE4F7C00345C2D /* Blur.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 2C864A621CEE4F7C00345C2D /* Blur.fsh */; };
 		2CA1768D1CEF5ED400DFE232 /* babyCloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA1768C1CEF5ED400DFE232 /* babyCloud.png */; };
 		2CA176901CEF5F4400DFE232 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA1768F1CEF5F4400DFE232 /* SWRevealViewController.m */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		2C2C9C141CDA4EC3004CE1DE /* TheModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TheModel.swift; path = ../TheModel.swift; sourceTree = "<group>"; };
 		2C2DFDF91CE267D900323088 /* Spark.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Spark.sks; path = ../Spark.sks; sourceTree = "<group>"; };
+		2C5E043F1D05CA1700127483 /* GameScene2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene2.sks; sourceTree = "<group>"; };
 		2C864A621CEE4F7C00345C2D /* Blur.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Blur.fsh; sourceTree = "<group>"; };
 		2CA1768C1CEF5ED400DFE232 /* babyCloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = babyCloud.png; sourceTree = SOURCE_ROOT; };
 		2CA1768E1CEF5F4400DFE232 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = SOURCE_ROOT; };
@@ -173,6 +175,7 @@
 				2CDD3C891CD8FC1C003994C7 /* Main.storyboard */,
 				2C864A621CEE4F7C00345C2D /* Blur.fsh */,
 				2CDD3C831CD8FC1C003994C7 /* GameScene.sks */,
+				2C5E043F1D05CA1700127483 /* GameScene2.sks */,
 				2CDD3CB31CD9113C003994C7 /* Ball.sks */,
 				2CE6864F1CEE35A1007A6209 /* babyCloud.sks */,
 				2CA3F73E1CDD311A00AF71A8 /* Rain.sks */,
@@ -326,6 +329,7 @@
 				2CCE03761CEA340A007C3D04 /* eyes.png in Resources */,
 				2C864A631CEE4F7C00345C2D /* Blur.fsh in Resources */,
 				2CCE03991CEB7E9B007C3D04 /* go1.sks in Resources */,
+				2C5E04401D05CA1700127483 /* GameScene2.sks in Resources */,
 				2CDD3C901CD8FC1C003994C7 /* LaunchScreen.storyboard in Resources */,
 				2CCE03971CEB799E007C3D04 /* go.sks in Resources */,
 				2CCE03781CEA3AD7007C3D04 /* eyes2.png in Resources */,

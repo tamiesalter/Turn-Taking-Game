@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3D409A5FFC29CB5062B374DF31DFB68EEE271D3B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3D409A5FFC29CB5062B374DF31DFB68EEE271D3B" : 0,
+    "D71A4B59785ACF9A92FBD8BF37584C3B4A96E488" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1979D5BD-D8DB-4BA5-935A-C7689319E04F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3D409A5FFC29CB5062B374DF31DFB68EEE271D3B" : "QueGame\/",
+    "D71A4B59785ACF9A92FBD8BF37584C3B4A96E488" : "QueBall-Games\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Turn Taking",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Turn Taking.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tamiesalter\/Turn-Taking-Game.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3D409A5FFC29CB5062B374DF31DFB68EEE271D3B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tamiesalter\/QueBall-Games.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D71A4B59785ACF9A92FBD8BF37584C3B4A96E488"
+    }
+  ]
+}
