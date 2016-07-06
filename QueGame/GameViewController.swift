@@ -24,13 +24,12 @@ class GameViewController: UIViewController {
             menuButton.target = self.revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-            print(UIDevice().systemName)
-            if (UIDevice().name) == "iPad Simulator" || (UIDevice().name) == "iPad" {
+            print(UIDevice().model)
+            if (UIDevice().model) == "iPad Simulator" || (UIDevice().model) == "iPad" {
                 name = "GameScene2"
             }else {
                 name = "GameScene"
             }
-           // if (UIDevice().name) == "iPhone"
         }
         
         
